@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>844</width>
+    <height>636</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Image Enhancement</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QSplitter" name="splitter">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="QTabWidget" name="tabEnhance">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Maximum" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>250</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="tabNegative">
+        <attribute name="title">
+         <string>Negative</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QLabel" name="negativeLabel">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This will apply a negative transformation to the chosen image.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="scaledContents">
+            <bool>false</bool>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tabLogirithmic">
+        <attribute name="title">
+         <string>Logirithmic</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <item>
+            <widget class="QRadioButton" name="logRadio">
+             <property name="text">
+              <string>Logirithmic</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDoubleSpinBox" name="logConstSpin">
+             <property name="prefix">
+              <string>C = </string>
+             </property>
+             <property name="minimum">
+              <double>0.000000000000000</double>
+             </property>
+             <property name="maximum">
+              <double>10000.000000000000000</double>
+             </property>
+             <property name="value">
+              <double>105.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="inverseLogRadio">
+             <property name="text">
+              <string>Inverse Logirithmic</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tabPowe">
+        <attribute name="title">
+         <string>Power</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_7">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_6">
+           <item>
+            <widget class="QDoubleSpinBox" name="powConstSping">
+             <property name="prefix">
+              <string>C = </string>
+             </property>
+             <property name="suffix">
+              <string/>
+             </property>
+             <property name="minimum">
+              <double>-10000.000000000000000</double>
+             </property>
+             <property name="value">
+              <double>1.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDoubleSpinBox" name="powGammaSpin">
+             <property name="prefix">
+              <string>Gamma = </string>
+             </property>
+             <property name="suffix">
+              <string/>
+             </property>
+             <property name="value">
+              <double>5.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tabStretching">
+        <attribute name="title">
+         <string>Stretching</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_8">
+         <item>
+          <widget class="QSpinBox" name="stretchSMin">
+           <property name="prefix">
+            <string>Smin = </string>
+           </property>
+           <property name="maximum">
+            <number>255</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="stretchSMax">
+           <property name="prefix">
+            <string>Smax = </string>
+           </property>
+           <property name="maximum">
+            <number>255</number>
+           </property>
+           <property name="value">
+            <number>255</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QScrollArea" name="scrollArea">
+       <property name="frameShape">
+        <enum>QFrame::Box</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="scrollAreaWidgetContents">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>568</width>
+          <height>273</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QLabel" name="imageLabel">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;No Image Loaded. &lt;/p&gt;&lt;p&gt;You can load images by pressing the load button below &lt;/p&gt;&lt;p&gt;(supported formats are jpg and png).&lt;/p&gt;&lt;p&gt;Any chosen image that is not gray,&lt;/p&gt;&lt;p&gt;will be converted to 8-bits gray scale level automatically,&lt;/p&gt;&lt;p&gt;then you can apply any enhancements from the side tabs,&lt;/p&gt;&lt;p&gt;with any given parameters.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="loadButton">
+        <property name="text">
+         <string>&amp;Load</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="applyButton">
+        <property name="text">
+         <string>&amp;Apply</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="undoButton">
+        <property name="text">
+         <string>&amp;Undo</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="saveButton">
+        <property name="text">
+         <string>&amp;Save</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="quitButton">
+        <property name="text">
+         <string>&amp;Quit</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>844</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_File">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="quitAction"/>
+   </widget>
+   <widget class="QMenu" name="menu_About">
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="aboutAction"/>
+   </widget>
+   <addaction name="menu_File"/>
+   <addaction name="menu_About"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="aboutAction">
+   <property name="text">
+    <string>&amp;About</string>
+   </property>
+  </action>
+  <action name="quitAction">
+   <property name="text">
+    <string>&amp;Quit</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
